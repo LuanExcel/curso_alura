@@ -41,6 +41,13 @@ df['Data'] = df['Data'].apply(mdates.date2num)
 
 dados_novo = yf.download('PETR4.SA',start='2023-01-01',end='2023-12-31')
 
-
+# head30 = 30 linhas, 
+# type='candle' é o tipo do grafico
+# figsize=(16,8) tamanho da figura
+# volume=True se refere as barras abaixo
+# mav=(7,14) media model
+# style='yahoo'só um estilo com cores pré definidas
 mpf.plot(dados_novo.head(30) ,type='candle',figsize=(16,8),volume=True,mav=(7,14),style='yahoo')
+
+#teste
 
